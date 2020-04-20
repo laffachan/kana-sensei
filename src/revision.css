@@ -1,0 +1,6 @@
+.kana_revision {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  font-size: 1.7rem;
+}
