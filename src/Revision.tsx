@@ -1,5 +1,5 @@
 import React from "react";
-import { hiragana, katakana } from "./kana.js";
+import { hiragana, katakana } from "./kana";
 import "./revision.css";
 
 function Revision() {
