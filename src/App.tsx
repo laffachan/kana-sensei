@@ -5,7 +5,6 @@ import Revision from "./Revision";
 import { hiragana, katakana } from "./kana";
 import Home from "./Home";
 
-// test
 export default function App() {
   return (
     <Router>
