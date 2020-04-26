@@ -1,22 +1,28 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import "./styles.css";
-import Katakana from "./Katakana";
-import Hiragana from "./Hiragana";
+import Exercice from "./Exercice";
 import Revision from "./Revision";
+import { hiragana, katakana } from "./kana";
 import Home from "./Home";
 
 export default function App() {
   return (
     <Router>
-      <div className="app">
-        <Link to="/">Kana-app</Link>
+      <div className="flex flex-col -min-h-screen divide-y divide-gray-400 ">
+        <div className="container mx-auto flex p-4 justify-between ">
+          <Link to="/">
+            <div>Kana-app</div>
+          </Link>
+          <Link to="/revision">
+            <div>Revision</div>
+          </Link>
+        </div>
         <Switch>
           <Route path="/hiragana">
-            <Hiragana />
+            <Exercice data={hiragana} />
           </Route>
           <Route path="/katakana">
-            <Katakana />
+            <Exercice data={katakana} />
           </Route>
           <Route path="/revision">
             <Revision />

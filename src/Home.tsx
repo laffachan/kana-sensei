@@ -1,19 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
 
 export default function Home() {
   return (
-    <nav className="wrapper">
-      <Link to="/hiragana">
-        <button className="course">Hiragana ひらがな</button>
+    <div className="pt-20 flex flex-1 flex-col justify-center items-center leading-relaxed text-4xl sm:text-6xl">
+      Study
+      <Link to="/hiragana" className="underline">
+        Hiragana ひらがな
       </Link>
-      <Link to="/katakana">
-        <button className="course">Katakana カタカナ</button>
+      <p>or</p>
+      <Link to="/katakana" className="underline">
+        Katakana カタカナ
       </Link>
-      <Link to="/revision">
-        <button className="course">Revision</button>
-      </Link>
-    </nav>
+    </div>
   );
 }
