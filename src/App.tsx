@@ -8,13 +8,23 @@ import Home from "./Home";
 export default function App() {
   return (
     <Router>
-      <div className="flex flex-col -min-h-screen divide-y divide-gray-400 ">
-        <div className="container mx-auto flex p-4 justify-between ">
+      <div className="flex flex-col min-h-screen divide-y divide-gray-400 ">
+        <div className="container mx-auto flex p-4 justify-between">
           <Link to="/">
-            <div>Kana-app</div>
+            <div>
+              <span role="img" aria-label="">
+                ⛩️
+              </span>{" "}
+              KANA
+            </div>
           </Link>
           <Link to="/revision">
-            <div>Revision</div>
+            <div>
+              <span role="img" aria-label="">
+                📔
+              </span>{" "}
+              Kana List
+            </div>
           </Link>
         </div>
         <Switch>

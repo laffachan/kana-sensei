@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="pt-20 flex flex-1 flex-col justify-center items-center leading-relaxed text-4xl sm:text-6xl">
-      Study
+      Practice
       <Link to="/hiragana" className="underline">
         Hiragana ひらがな
       </Link>
