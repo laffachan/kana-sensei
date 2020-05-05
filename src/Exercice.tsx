@@ -19,7 +19,6 @@ function Exercice({ data }: Props) {
   // Change button if wrong answer
   const [isWrong, setIsWrong] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
-  // Used when the answer is wrong and the kana exist to help the user
 
   function checkInput() {
     if (
@@ -47,7 +46,6 @@ function Exercice({ data }: Props) {
 
   // After the answer, change the kana
   function clear() {
-    console.log("clear");
     setInputValue("");
     setRandomKana(data[Math.floor(Math.random() * data.length)]);
     setIsAnswered(false);
@@ -60,12 +58,17 @@ function Exercice({ data }: Props) {
 
   return (
     <div className="pt-12 text-center">
-      <div className="border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32">
+      <div className="border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2">
         {randomKana[0]}
       </div>
-      {/*       <div className="border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 uppercase">
+      <div
+        className={classNames(
+          "border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 uppercase m-2",
+          { "bg-green-200": !isWrong && isAnswered }
+        )}
+      >
         {isAnswered ? randomKana[1] : "?"}
-      </div> */}
+      </div>
       <form action="#" onSubmit={handleSubmit}>
         <div className="relative">
           <input
@@ -89,19 +92,17 @@ function Exercice({ data }: Props) {
             value={inputValue}
           />
         </div>
-        {isAnswered ? (
-          isWrong ? (
-            <>
-              <p className="text-gray-700 text-lg">
+        {isAnswered && isWrong ? (
+          <>
+            {/* <p className="text-gray-700 text-lg">
                 Correct answer:{" "}
                 <span className="font-bold uppercase">{randomKana[1]}</span>
-              </p>
-              <p className="text-gray-600">
-                <span className="uppercase">{inputValue}</span> ={" "}
-                {getKana(data, inputValue)} / press enter to continue...
-              </p>
-            </>
-          ) : (
+              </p> */}
+            <p className="text-gray-600">
+              <span className="uppercase">{inputValue}</span> ={" "}
+              {getKana(data, inputValue)} / press enter to continue...
+            </p>
+          </> /* : (
             <p className="text-gray-700 text-lg">
               <span role="img" aria-label="">
                 😄
@@ -109,6 +110,7 @@ function Exercice({ data }: Props) {
               Good !
             </p>
           )
+        )  */
         ) : (
           ""
         )}

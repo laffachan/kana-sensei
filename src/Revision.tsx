@@ -7,8 +7,9 @@ function Revision() {
       <table className="border-collapse border-2 border-gray-500">
         <thead>
           <tr>
-            <th className="w-1/2 px-4 py-2">Hiragana</th>
-            <th className="w-1/2 px-4 py-2">Katakana</th>
+            <th className="w-1/3 px-2 py-2">Romaji</th>
+            <th className="w-1/3 px-2 py-2">Hiragana</th>
+            <th className="w-1/3 px-2 py-2">Katakana</th>
           </tr>
         </thead>
         <tbody className="text-center">
@@ -16,14 +17,21 @@ function Revision() {
             <td className="border px-4 py-2">
               {hiragana.map(e => (
                 <li className="list-none" key={e[0]}>
-                  {e[0]} : {e[1]}
+                  {e[1]}
+                </li>
+              ))}
+            </td>
+            <td className="border px-4 py-2">
+              {hiragana.map(e => (
+                <li className="list-none" key={e[0]}>
+                  {e[0]}
                 </li>
               ))}
             </td>
             <td className="border px-4 py-2">
               {katakana.map(e => (
                 <li className="list-none" key={e[0]}>
-                  {e[0]} : {e[1]}
+                  {e[0]}
                 </li>
               ))}
             </td>
