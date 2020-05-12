@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 
 function findKana(kanaList: string[][], romaji: string): string | undefined {
@@ -9,31 +9,75 @@ function findKana(kanaList: string[][], romaji: string): string | undefined {
 type Props = {
   kanaList: string[][];
   kana: string;
-  setKana: React.Dispatch<React.SetStateAction<string[]>>;
+  goodAnswer: string;
+  onGoodAnswered: () => void;
+  onBadAnswered: () => void;
 };
+
+const goodEmoji = [
+  "😊",
+  "🤓",
+  "😃",
+  "🤩",
+  "🥳",
+  "👍",
+  "👏",
+  "💪",
+  "😍",
+  "😁",
+  "🤠"
+];
+const badEmoji = [
+  "😆",
+  "🤣",
+  "🤐",
+  "🙄",
+  "🤢",
+  "😵",
+  "☹",
+  "😰",
+  "😭",
+  "😖",
+  "😱",
+  "🤬",
+  "👎"
+];
 
 // kanaList is an array of pairs kana <-> romaji
 // example: [["あ", "a"], ["い", "i"] ...]
 // kana is the kana that the user needs to translate
 // example: "あ"
-function Question({ kanaList, kana, setKana }: Props) {
-  const [isWrong, setIsWrong] = useState(false);
+function Question({
+  kanaList,
+  kana,
+  goodAnswer,
+  onGoodAnswered,
+  onBadAnswered
+}: Props) {
+  const [isCorrect, setIsCorrect] = useState(false);
   const [exist, setExist] = useState(true);
   const [inputValue, setInputValue] = useState("");
   const [isAnswered, setIsAnswered] = useState(false);
 
+  const good = [...goodEmoji][
+    Math.floor(Math.random() * [...goodEmoji].length)
+  ];
+  const bad = [...badEmoji][Math.floor(Math.random() * [...badEmoji].length)];
+
+  useEffect(clear, [kana]);
+
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const userKana = findKana(kanaList, e.target.value);
     setInputValue(e.target.value);
-    setIsAnswered(true);
+    console.log(userKana, isAnswered, !isCorrect);
     // si il existe
     if (userKana) {
+      console.log("test");
+      setIsAnswered(true);
       setExist(true);
-      setIsWrong(userKana !== kana);
+      setIsCorrect(userKana === kana);
       if (userKana === kana) {
-        setTimeout(() => {
-          clear();
-        }, 1000);
+        onGoodAnswered();
       }
     } else {
       setExist(false);
@@ -44,12 +88,15 @@ function Question({ kanaList, kana, setKana }: Props) {
     e.preventDefault();
     console.log(inputValue);
     clear();
+    if (isAnswered === true) {
+      onBadAnswered();
+    }
   }
 
   function clear() {
     setIsAnswered(false);
+    setIsCorrect(false);
     setInputValue("");
-    setKana(kanaList[Math.floor(Math.random() * kanaList.length)]);
   }
 
   return (
@@ -63,9 +110,9 @@ function Question({ kanaList, kana, setKana }: Props) {
           className={classNames(
             "border border-gray-400 rounded-md mb-4 px-2 py-1 uppercase text-center w-24 text-xl",
             {
-              "border-red-800 bg-red-200 text-red-800": isAnswered && isWrong,
               "border-green-800 bg-green-200 text-green-800":
-                isAnswered && !isWrong
+                isAnswered && isCorrect,
+              "border-red-800 bg-red-200 text-red-800": isAnswered && !isCorrect
             }
           )}
           minLength={1}
@@ -79,11 +126,15 @@ function Question({ kanaList, kana, setKana }: Props) {
           aria-label="questionInput"
           value={inputValue}
         />
-        <div data-testid="status">
-          {!isAnswered ? "" : !exist ? "" : isWrong ? "" : "good"}{" "}
+        <div data-testid="status" className="text-xl">
+          {isAnswered && exist ? (isCorrect ? `✔ ${good}` : `❌ ${bad}`) : ""}{" "}
         </div>
-        {isAnswered && isWrong ? (
+        {isAnswered && !isCorrect ? (
           <>
+            <p className="text-gray-600">
+              Good answer :{" "}
+              <span className="uppercase font-bold">{goodAnswer}</span>
+            </p>
             <p className="text-gray-600">
               <span className="uppercase">{inputValue}</span> ={" "}
               {findKana(kanaList, inputValue)} / press enter to continue...

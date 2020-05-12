@@ -24,17 +24,17 @@ test("It should contain kana", () => {
 test("It should be good", () => {
   const { input, status } = setup("い");
   fireEvent.change(input, { target: { value: "i" } });
-  expect(status).toHaveTextContent("good");
+  expect(status).toHaveTextContent("✔");
 });
 
 test("It should be bad", () => {
   const { input, status } = setup("あ");
   fireEvent.change(input, { target: { value: "i" } });
-  expect(status).toHaveTextContent("bad");
-});
+  expect(status).toHaveTextContent("❌");
 
-test("It should handle unknown input", () => {
-  const { input, status } = setup("あ");
-  fireEvent.change(input, { target: { value: "fr" } });
-  expect(status).toHaveTextContent("");
+  test("It should handle unknown input", () => {
+    const { input, status } = setup("あ");
+    fireEvent.change(input, { target: { value: "fr" } });
+    expect(status).toHaveTextContent("");
+  });
 });
