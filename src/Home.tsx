@@ -12,6 +12,11 @@ export default function Home() {
       <Link to="/katakana" className="underline">
         Katakana カタカナ
       </Link>
+      <footer className="container mx-auto w-full text-right p-4 text-sm absolute bottom-0 border-t bg-teal-100">
+        <div>
+          <a href="https://github.com/laffachan/kana-app">By Laffachan</a>
+        </div>
+      </footer>
     </div>
   );
 }
