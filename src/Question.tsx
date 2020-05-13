@@ -101,7 +101,15 @@ function Question({
 
   return (
     <div className="pt-12 text-center">
-      <div className="border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2">
+      <div
+        className={classNames(
+          "border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2 ",
+          {
+            "border-green-400": isAnswered && isCorrect,
+            "border-red-400": isAnswered && !isCorrect
+          }
+        )}
+      >
         {kana}
       </div>
       <form action="#" onSubmit={handleSubmit}>
@@ -127,7 +135,15 @@ function Question({
           value={inputValue}
         />
         <div data-testid="status" className="text-xl">
-          {isAnswered && exist ? (isCorrect ? `✔ ${good}` : `❌ ${bad}`) : ""}{" "}
+          {isAnswered && exist ? (
+            isCorrect ? (
+              <div data-testid="good">{good}</div>
+            ) : (
+              <div data-testid="bad">{bad}</div>
+            )
+          ) : (
+            ""
+          )}{" "}
         </div>
         {isAnswered && !isCorrect ? (
           <>

@@ -9,11 +9,11 @@ export default function App() {
   return (
     <Router>
       <div
-        className="max-w-screen-sm mx-auto flex flex-col min-h-screen divide-y divide-gray-400 "
+        className="relative mx-auto flex flex-col min-h-screen divide-y divide-gray-400"
         style={{ minHeight: "-webkit-fill-available" }}
       >
         <div className="flex-grow">
-          <div className="container mx-auto flex p-4 justify-between border-b">
+          <div className="container mx-auto flex p-4 justify-between border-b bg-teal-100 xl:justify-around">
             <Link to="/">
               <div>
                 <span role="img" aria-label="">
@@ -46,9 +46,6 @@ export default function App() {
             </Route>
           </Switch>
         </div>
-        <footer className="container mx-auto w-full text-right p-4 pin-b text-sm">
-          <div>By Laffachan</div>
-        </footer>
       </div>
     </Router>
   );

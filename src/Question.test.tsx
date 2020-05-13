@@ -1,7 +1,12 @@
 import React from "react";
 import Question from "./Question";
 import "@testing-library/jest-dom";
-import { render, fireEvent, screen } from "@testing-library/react";
+import {
+  render,
+  fireEvent,
+  screen,
+  queryByTestId
+} from "@testing-library/react";
 
 const kanaList = [["あ", "a"], ["い", "i"]];
 
@@ -24,13 +29,13 @@ test("It should contain kana", () => {
 test("It should be good", () => {
   const { input, status } = setup("い");
   fireEvent.change(input, { target: { value: "i" } });
-  expect(status).toHaveTextContent("✔");
+  expect(queryByTestId(status, "good")).toBeVisible();
 });
 
 test("It should be bad", () => {
   const { input, status } = setup("あ");
   fireEvent.change(input, { target: { value: "i" } });
-  expect(status).toHaveTextContent("❌");
+  expect(queryByTestId(status, "bad")).toBeVisible();
 
   test("It should handle unknown input", () => {
     const { input, status } = setup("あ");
