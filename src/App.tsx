@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Revision from "./Revision";
 import Practice from "./Practice";
 import { hiragana, katakana } from "./kana";
 import Home from "./Home";
+import ReactModal from "react-modal";
+import Modal from "react-modal";
 
 export default function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  Modal.setAppElement("#root");
+
+  function handleOpenModal() {
+    setShowModal(true);
+  }
+
+  function handleCloseModal() {
+    setShowModal(false);
+  }
+
   return (
     <Router>
       <div
-        className="max-w-screen-sm mx-auto flex flex-col min-h-screen divide-y divide-gray-400 "
+        className="relative mx-auto flex flex-col min-h-screen divide-y divide-gray-400"
         style={{ minHeight: "-webkit-fill-available" }}
       >
         <div className="flex-grow">
-          <div className="container mx-auto flex p-4 justify-between border-b">
+          <div className="container mx-auto flex p-4 justify-between border-b bg-teal-100 xl:justify-around">
             <Link to="/">
               <div>
                 <span role="img" aria-label="">
@@ -22,14 +36,22 @@ export default function App() {
                 KANA Practice
               </div>
             </Link>
-            <Link to="/revision">
-              <div>
-                <span role="img" aria-label="">
-                  📔
-                </span>{" "}
-                Kana List
-              </div>
-            </Link>
+            <div>
+              <span role="img" aria-label="">
+                📔
+              </span>{" "}
+              <button onClick={handleOpenModal}>Kana List</button>
+              <ReactModal
+                isOpen={showModal}
+                contentLabel="Revision"
+                onRequestClose={handleCloseModal}
+              >
+                <button onClick={handleCloseModal}>X</button>
+                <div className="relative pt-5">
+                  <Revision />
+                </div>
+              </ReactModal>
+            </div>
           </div>
           <Switch>
             <Route path="/hiragana">
@@ -38,17 +60,12 @@ export default function App() {
             <Route path="/katakana">
               <Practice data={katakana} />
             </Route>
-            <Route path="/revision">
-              <Revision />
-            </Route>
+
             <Route path="/">
               <Home />
             </Route>
           </Switch>
         </div>
-        <footer className="container mx-auto w-full text-right p-4 pin-b text-sm">
-          <div>By Laffachan</div>
-        </footer>
       </div>
     </Router>
   );

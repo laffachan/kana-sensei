@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // @ts-ignore
-import * as serviceWorker from './serviceWorker';
-
+import * as serviceWorker from "./serviceWorker";
 
 import App from "./App";
 
