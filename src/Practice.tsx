@@ -25,7 +25,8 @@ function Practice({ data }: Props) {
   }
 
   return (
-    <div className="pt-12 text-center">
+    <div className="pt-12 text-center text-xl">
+      Write it in romaji
       <Question
         kanaList={data}
         kana={randomKana[0]}
