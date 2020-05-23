@@ -27,7 +27,7 @@ export default function App() {
         style={{ minHeight: "-webkit-fill-available" }}
       >
         <div className="flex-grow">
-          <div className="container mx-auto flex p-4 justify-between border-b bg-teal-100 xl:justify-around">
+          <div className="container mx-auto flex p-4 justify-between border-b bg-teal-100">
             <Link to="/">
               <div>
                 <span role="img" aria-label="">
@@ -46,9 +46,8 @@ export default function App() {
                 contentLabel="Revision"
                 onRequestClose={handleCloseModal}
               >
-                <button onClick={handleCloseModal}>X</button>
-                <div className="relative pt-5">
-                  <Revision />
+                <div>
+                  <Revision handleClose={handleCloseModal} />
                 </div>
               </ReactModal>
             </div>
