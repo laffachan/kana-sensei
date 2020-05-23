@@ -87,9 +87,13 @@ function Question({
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     console.log(inputValue);
-    clear();
     if (isAnswered === true) {
-      onBadAnswered();
+      if (!isCorrect) {
+        onBadAnswered();
+        clear();
+      } else {
+        setTimeout(() => clear(), 1000);
+      }
     }
   }
 
