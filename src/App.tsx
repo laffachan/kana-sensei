@@ -28,6 +28,7 @@ export default function App() {
       >
         <div className="flex-grow">
           <div className="container mx-auto flex p-4 justify-between border-b bg-teal-100">
+
             <Link to="/">
               <div>
                 <span role="img" aria-label="">

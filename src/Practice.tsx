@@ -34,6 +34,7 @@ function Practice({ data }: Props) {
   }
 
   return (
+
     <div>
       <ReactModal
         isOpen={showModal}
@@ -58,6 +59,7 @@ function Practice({ data }: Props) {
           onBadAnswered={handleBadAnswered}
         />
       </div>
+
     </div>
   );
 }
