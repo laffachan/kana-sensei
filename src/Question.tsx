@@ -92,6 +92,7 @@ function Question({
         onBadAnswered();
         clear();
       } else {
+        // Prevent the kana to change on click when good answer
         setTimeout(() => clear(), 1000);
       }
     }
