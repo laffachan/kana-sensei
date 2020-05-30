@@ -2,6 +2,7 @@
   "name": "KANA-Practice",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://laffachan.github.io/KANA-Practice",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
@@ -15,6 +16,7 @@
     "@types/react-router-dom": "5.1.4",
     "classnames": "2.2.6",
     "eslint-plugin-react-hooks": "3.0.0",
+    "gh-pages": "^3.0.0",
     "react": "16.13.1",
     "react-debounce-input": "3.2.2",
     "react-dom": "16.13.1",
@@ -25,6 +27,8 @@
     "typescript": "3.8.3"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
