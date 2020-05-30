@@ -1,5 +1,6 @@
 {
-  "name": "KANA Practice",
+  "private": true,
+  "name": "KANA-Practice",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
