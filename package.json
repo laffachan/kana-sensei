@@ -2,7 +2,7 @@
   "name": "kana-practice",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://laffachan.github.io/KANA-Practice",
+  "homepage": "https://laffachan.github.io/kana-practice",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
