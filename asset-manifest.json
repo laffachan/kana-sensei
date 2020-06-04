@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/KANA-Practice/static/js/main.e2a48155.chunk.js",
-    "main.js.map": "/KANA-Practice/static/js/main.e2a48155.chunk.js.map",
-    "runtime-main.js": "/KANA-Practice/static/js/runtime-main.9fb2b1d2.js",
-    "runtime-main.js.map": "/KANA-Practice/static/js/runtime-main.9fb2b1d2.js.map",
-    "static/js/2.b9bce78c.chunk.js": "/KANA-Practice/static/js/2.b9bce78c.chunk.js",
-    "static/js/2.b9bce78c.chunk.js.map": "/KANA-Practice/static/js/2.b9bce78c.chunk.js.map",
-    "index.html": "/KANA-Practice/index.html",
-    "precache-manifest.1bac0bf950345a6feac9d17a8b19c4df.js": "/KANA-Practice/precache-manifest.1bac0bf950345a6feac9d17a8b19c4df.js",
-    "service-worker.js": "/KANA-Practice/service-worker.js",
-    "static/js/2.b9bce78c.chunk.js.LICENSE.txt": "/KANA-Practice/static/js/2.b9bce78c.chunk.js.LICENSE.txt"
+    "main.js": "/kana-practice/static/js/main.28e23d26.chunk.js",
+    "main.js.map": "/kana-practice/static/js/main.28e23d26.chunk.js.map",
+    "runtime-main.js": "/kana-practice/static/js/runtime-main.93227d91.js",
+    "runtime-main.js.map": "/kana-practice/static/js/runtime-main.93227d91.js.map",
+    "static/js/2.d94366bb.chunk.js": "/kana-practice/static/js/2.d94366bb.chunk.js",
+    "static/js/2.d94366bb.chunk.js.map": "/kana-practice/static/js/2.d94366bb.chunk.js.map",
+    "index.html": "/kana-practice/index.html",
+    "precache-manifest.fc25e2cb0fdf64146ff7d35185959ee3.js": "/kana-practice/precache-manifest.fc25e2cb0fdf64146ff7d35185959ee3.js",
+    "service-worker.js": "/kana-practice/service-worker.js",
+    "static/js/2.d94366bb.chunk.js.LICENSE.txt": "/kana-practice/static/js/2.d94366bb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9fb2b1d2.js",
-    "static/js/2.b9bce78c.chunk.js",
-    "static/js/main.e2a48155.chunk.js"
+    "static/js/runtime-main.93227d91.js",
+    "static/js/2.d94366bb.chunk.js",
+    "static/js/main.28e23d26.chunk.js"
   ]
 }
