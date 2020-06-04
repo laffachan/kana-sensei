@@ -12,7 +12,7 @@ import {
 const kanaList = [["あ", "a"], ["い", "i"]];
 
 const setup = (kana: string) => {
-  const utils = render(<Question kanaList={kanaList} kana={kana} />);
+  const utils = render(<Question kanaList={kanaList} kana={kana} onGoodAnswered={() => {}}  onBadAnswered={() => {}} goodAnswer="" />);
   const input = utils.getByLabelText("questionInput");
   const status = screen.getByTestId("status");
   return {
