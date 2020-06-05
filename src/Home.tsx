@@ -12,9 +12,10 @@ export default function Home() {
       <Link to="/katakana" className="underline">
         Katakana カタカナ
       </Link>
-      <div className="border text-sm italic mt-16 m-8 items-cente justify-center">
+      <div className="border-2 text-sm italic mt-16 m-8 p-2">
         <p className="font-bold">How does it work ?</p>
-        <p>Find and write the matching romaji of the given hiragana or katakana   <span role="img" aria-label="writing-hand">✍️</span></p>
+        <p>- Select the kanas you want to practice</p>
+        <p>- Find and write the matching romaji <span role="img" aria-label="writing-hand">✍️</span></p>
       </div>
       <footer className="container mx-auto w-full text-right p-4 text-sm absolute bottom-0 border-t bg-teal-100">
         <div>
