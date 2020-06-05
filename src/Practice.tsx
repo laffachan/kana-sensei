@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Question from "./Question";
-import ReactModal from "react-modal";
-import Modal from "react-modal";
 
 type Props = {
   data: string[][];
@@ -14,13 +12,7 @@ function getRandomKana(data: string[][]): string[] | (() => string[]) {
 function Practice({ data }: Props) {
   let timerId: number;
   const [randomKana, setRandomKana] = useState(getRandomKana(data));
-  const [showModal, setShowModal] = useState(true);
-
-  Modal.setAppElement("#root");
-
-  function toggleModal() {
-    setShowModal(false);
-  }
+ 
 
   function handleGoodAnswered() {
     if (timerId) {
@@ -51,7 +43,19 @@ function Practice({ data }: Props) {
 
 export default Practice;
 
-/*<ReactModal
+/*
+import ReactModal from "react-modal";
+import Modal from "react-modal";
+
+ const [showModal, setShowModal] = useState(true);
+
+  Modal.setAppElement("#root");
+
+  function toggleModal() {
+    setShowModal(false);
+  }
+
+<ReactModal
         isOpen={showModal}
         contentLabel="modal"
         onRequestClose={toggleModal}
