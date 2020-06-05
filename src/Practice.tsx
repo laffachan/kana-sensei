@@ -36,7 +36,22 @@ function Practice({ data }: Props) {
   return (
 
     <div>
-      <ReactModal
+      <div className="pt-12 text-center text-xl">
+        <Question
+          kanaList={data}
+          kana={randomKana[0]}
+          goodAnswer={randomKana[1]}
+          onGoodAnswered={handleGoodAnswered}
+          onBadAnswered={handleBadAnswered}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default Practice;
+
+/*<ReactModal
         isOpen={showModal}
         contentLabel="modal"
         onRequestClose={toggleModal}
@@ -49,19 +64,4 @@ function Practice({ data }: Props) {
         >
           OK
         </button>
-      </ReactModal>
-      <div className="pt-12 text-center text-xl">
-        <Question
-          kanaList={data}
-          kana={randomKana[0]}
-          goodAnswer={randomKana[1]}
-          onGoodAnswered={handleGoodAnswered}
-          onBadAnswered={handleBadAnswered}
-        />
-      </div>
-
-    </div>
-  );
-}
-
-export default Practice;
+      </ReactModal>*/

@@ -117,10 +117,11 @@ function Question({
       </div>
       <form action="#" onSubmit={handleSubmit}>
         <DebounceInput
+          placeholder="A, NA, TA..."
           debounceTimeout={300}
           type="text"
           className={classNames(
-            "border border-gray-400 rounded-md mb-4 px-2 py-1 uppercase text-center w-24 text-xl",
+            "border border-gray-400 w-32 rounded-md mb-4 px-2 py-1 uppercase text-center w-24 text-xl",
             {
               "border-green-800 bg-green-200 text-green-800":
                 isAnswered && isCorrect,
