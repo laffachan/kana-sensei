@@ -17,8 +17,8 @@ export default function Home() {
         <p>- Select the kanas you want to practice</p>
         <p>- Find and write the matching romaji <span role="img" aria-label="writing-hand">✍️</span></p>
       </div>
-      <footer className="text-right w-screen p-4 text-sm absolute bottom-0 border-t bg-teal-100">
-        <div className="lg:mx-40 xl:mx-64">
+      <footer className="text-right w-screen p-4 text-sm absolute bottom-0 border-t bg-teal-100 text-black">
+        <div className="lg:mx-40 xl:mx-64 ">
           <a href="https://github.com/laffachan/kana-app">By Laffachan</a>
         </div>
       </footer>

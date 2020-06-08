@@ -27,8 +27,8 @@ export default function App() {
         style={{ minHeight: "-webkit-fill-available" }}
       >
         <div className="flex-grow w-full">
-          <div className="p-4 border-b bg-teal-100 ">
-            <div className="lg:mx-40 xl:mx-64 flex justify-between">
+          <div className="p-4 border-b bg-teal-100">
+            <div className="lg:mx-40 xl:mx-64 flex justify-between text-black">
             <Link to="/">
               <div>
                 <span role="img" aria-label="">

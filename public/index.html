@@ -13,10 +13,20 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
     <title>KANA Practice</title>
+    <style>
+      body { background: white; color: black; }
+
+@media (prefers-color-scheme: light) {
+  body { background: white; color: black; }
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background: black; color: white; }
+}
+</style>
   </head>
 
   <body>
     <div id="root"></div>
-    </script>
   </body>
 </html>
