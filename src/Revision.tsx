@@ -7,7 +7,7 @@ type Props = {
 
 function Revision({ handleClose }: Props) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center text-black">
       <div className="fixed">
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
