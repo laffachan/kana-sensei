@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ec79d7af60a995db630f3a19be3091a",
+    "revision": "aaeaf0b68eb4a15292b2ce26320dcfd1",
     "url": "/kana-practice/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kana-practice/static/js/2.01f03763.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4224a5691e8867282e99",
-    "url": "/kana-practice/static/js/main.e559f4b0.chunk.js"
+    "revision": "48f5f9aa166d5badaa91",
+    "url": "/kana-practice/static/js/main.5e31adb1.chunk.js"
   },
   {
     "revision": "6473d96d3fe7ccc6ca10",
