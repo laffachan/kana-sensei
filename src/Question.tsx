@@ -3,7 +3,7 @@ import { DebounceInput } from "react-debounce-input";
 import classNames from "classnames";
 
 function findKana(kanaList: string[][], romaji: string): string | undefined {
-  const [kana] = kanaList.find(kana => kana[1] === romaji) || [];
+  const [kana] = kanaList.find(kana  => kana[1] === romaji.toLowerCase()) || [];
   return kana;
 }
 
@@ -115,9 +115,19 @@ function Question({
       >
         {kana}
       </div>
+      <div
+        className={classNames(
+          "border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2",
+          {
+            "invisible hidden": !isAnswered || isCorrect,
+            "visible show": isAnswered && !isCorrect
+          }
+        )}
+      >
+        {goodAnswer}
+      </div>
       <form action="#" onSubmit={handleSubmit}>
         <DebounceInput
-          placeholder="A, NA, TA..."
           debounceTimeout={300}
           type="text"
           className={classNames(
@@ -152,10 +162,6 @@ function Question({
         </div>
         {isAnswered && !isCorrect ? (
           <>
-            <p className="text-gray-600">
-              Good answer :{" "}
-              <span className="uppercase font-bold">{goodAnswer}</span>
-            </p>
             <p className="text-gray-600">
               <span className="uppercase">{inputValue}</span> ={" "}
               {findKana(kanaList, inputValue)} / press enter to continue...

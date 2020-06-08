@@ -23,12 +23,12 @@ export default function App() {
   return (
     <Router>
       <div
-        className="relative mx-auto flex flex-col min-h-screen divide-y divide-gray-400"
+        className="relative flex flex-col min-h-screen divide-y divide-gray-400"
         style={{ minHeight: "-webkit-fill-available" }}
       >
-        <div className="flex-grow">
-          <div className="container mx-auto flex p-4 justify-between border-b bg-teal-100">
-
+        <div className="flex-grow w-full">
+          <div className="p-4 border-b bg-teal-100 ">
+            <div className="lg:mx-40 xl:mx-64 flex justify-between">
             <Link to="/">
               <div>
                 <span role="img" aria-label="">
@@ -51,6 +51,7 @@ export default function App() {
                   <Revision handleClose={handleCloseModal} />
                 </div>
               </ReactModal>
+            </div>
             </div>
           </div>
           <Switch>
