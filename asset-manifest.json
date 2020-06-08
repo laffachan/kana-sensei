@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/kana-practice/static/js/main.21730b7b.chunk.js",
-    "main.js.map": "/kana-practice/static/js/main.21730b7b.chunk.js.map",
+    "main.js": "/kana-practice/static/js/main.e559f4b0.chunk.js",
+    "main.js.map": "/kana-practice/static/js/main.e559f4b0.chunk.js.map",
     "runtime-main.js": "/kana-practice/static/js/runtime-main.93227d91.js",
     "runtime-main.js.map": "/kana-practice/static/js/runtime-main.93227d91.js.map",
     "static/js/2.01f03763.chunk.js": "/kana-practice/static/js/2.01f03763.chunk.js",
     "static/js/2.01f03763.chunk.js.map": "/kana-practice/static/js/2.01f03763.chunk.js.map",
     "index.html": "/kana-practice/index.html",
-    "precache-manifest.284af79467fd15fd4aa0c1aa979bdb55.js": "/kana-practice/precache-manifest.284af79467fd15fd4aa0c1aa979bdb55.js",
+    "precache-manifest.f7ee2db65299ecf376b2b77df6938668.js": "/kana-practice/precache-manifest.f7ee2db65299ecf376b2b77df6938668.js",
     "service-worker.js": "/kana-practice/service-worker.js",
     "static/js/2.01f03763.chunk.js.LICENSE.txt": "/kana-practice/static/js/2.01f03763.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.93227d91.js",
     "static/js/2.01f03763.chunk.js",
-    "static/js/main.21730b7b.chunk.js"
+    "static/js/main.e559f4b0.chunk.js"
   ]
 }
