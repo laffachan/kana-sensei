@@ -120,7 +120,7 @@ function Question({
           "absolute border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2 cursor-pointer ",
           {
             "border-green-400": isAnswered && isCorrect,
-            "relative transition transform -translate-x-4 duration-700 border-red-400": isAnswered && !isCorrect
+            "absolute transition transform -translate-x-20 duration-1000 border-red-400": isAnswered && !isCorrect
           }
         )}
       >
@@ -131,7 +131,7 @@ function Question({
           "border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2 cursor-pointer",
           {
             "invisible": !isAnswered || isCorrect,
-            "transition transform translate-x-4  duration-700 border-red-400": isAnswered && !isCorrect
+            "transition transform translate-x-20 duration-1000 border-red-400": isAnswered && !isCorrect
           }
         )}
       >
