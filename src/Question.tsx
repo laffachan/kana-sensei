@@ -85,6 +85,16 @@ function Question({
     }
   }
 
+  function getAnswer () {
+    setIsAnswered(true);
+    setIsCorrect(false);
+  }
+
+  function next() {
+    clear();
+    onBadAnswered();
+  }
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     console.log(inputValue);
@@ -104,34 +114,36 @@ function Question({
 
   return (
     <div className="pt-12 text-center">
-      <div
+    <div className="relative">
+      <div onClick={getAnswer}
         className={classNames(
-          "border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2 ",
+          "absolute border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2 cursor-pointer ",
           {
             "border-green-400": isAnswered && isCorrect,
-            "border-red-400": isAnswered && !isCorrect
+            "relative transition transform -translate-x-4 duration-700 border-red-400": isAnswered && !isCorrect
           }
         )}
       >
         {kana}
       </div>
-      <div
+      <div onClick={next}
         className={classNames(
-          "border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2",
+          "border-2 border-gray-400 rounded p-2 mb-6 inline-block text-6xl w-32 m-2 cursor-pointer",
           {
-            "invisible hidden": !isAnswered || isCorrect,
-            "visible show": isAnswered && !isCorrect
+            "invisible": !isAnswered || isCorrect,
+            "transition transform translate-x-4  duration-700 border-red-400": isAnswered && !isCorrect
           }
         )}
       >
         {goodAnswer}
+      </div>
       </div>
       <form action="#" onSubmit={handleSubmit}>
         <DebounceInput
           debounceTimeout={300}
           type="text"
           className={classNames(
-            "border border-gray-400 w-32 rounded-md mb-4 px-2 py-1 uppercase text-center w-24 text-xl text-black",
+            "relative border border-gray-400 w-32 rounded-md mb-4 px-2 py-1 uppercase text-center w-24 text-xl text-black",
             {
               "border-green-800 bg-green-200 text-green-800":
                 isAnswered && isCorrect,
@@ -164,7 +176,7 @@ function Question({
           <>
             <p className="text-gray-600">
               <span className="uppercase">{inputValue}</span> ={" "}
-              {findKana(kanaList, inputValue)} / press enter to continue...
+              {findKana(kanaList, inputValue)} / press enter to continue, or click on the answer
             </p>
           </>
         ) : (

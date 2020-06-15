@@ -7,8 +7,9 @@ module.exports = {
         dark: { raw: "(prefers-color-scheme: dark)" }
       }
     }
-  },
+    },
   plugins: [
+    require('tailwindcss-dark-mode')(),
     function({ addBase, config }) {
       addBase({
         body: {
@@ -24,5 +25,5 @@ module.exports = {
       });
     }
   ],
-  variants: {},
+    variants: {}
 };
