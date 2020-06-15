@@ -42,30 +42,3 @@ function Practice({ data }: Props) {
 }
 
 export default Practice;
-
-/*
-import ReactModal from "react-modal";
-import Modal from "react-modal";
-
- const [showModal, setShowModal] = useState(true);
-
-  Modal.setAppElement("#root");
-
-  function toggleModal() {
-    setShowModal(false);
-  }
-
-<ReactModal
-        isOpen={showModal}
-        contentLabel="modal"
-        onRequestClose={toggleModal}
-        className="flex flex-col items-center text-xl bg-gray-300 bg-opacity-50 h-full"
-      >
-        <h2 className="pb-2 pt-32 font-bold">Write the kana in romaji !</h2>
-        <button
-          className="mt-24 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          onClick={toggleModal}
-        >
-          OK
-        </button>
-      </ReactModal>*/
