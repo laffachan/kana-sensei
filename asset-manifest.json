@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/kana-practice/static/css/main.f484807d.chunk.css",
-    "main.js": "/kana-practice/static/js/main.00513baf.chunk.js",
-    "main.js.map": "/kana-practice/static/js/main.00513baf.chunk.js.map",
-    "runtime-main.js": "/kana-practice/static/js/runtime-main.93227d91.js",
-    "runtime-main.js.map": "/kana-practice/static/js/runtime-main.93227d91.js.map",
-    "static/js/2.8c94818f.chunk.js": "/kana-practice/static/js/2.8c94818f.chunk.js",
-    "static/js/2.8c94818f.chunk.js.map": "/kana-practice/static/js/2.8c94818f.chunk.js.map",
-    "index.html": "/kana-practice/index.html",
-    "precache-manifest.d6e9aa3ca848e1a7a8ee5b3b1ce3f2f8.js": "/kana-practice/precache-manifest.d6e9aa3ca848e1a7a8ee5b3b1ce3f2f8.js",
-    "service-worker.js": "/kana-practice/service-worker.js",
-    "static/css/main.f484807d.chunk.css.map": "/kana-practice/static/css/main.f484807d.chunk.css.map",
-    "static/js/2.8c94818f.chunk.js.LICENSE.txt": "/kana-practice/static/js/2.8c94818f.chunk.js.LICENSE.txt"
+    "main.css": "/kana-sensei/static/css/main.2ac0b84c.chunk.css",
+    "main.js": "/kana-sensei/static/js/main.1764c8fd.chunk.js",
+    "main.js.map": "/kana-sensei/static/js/main.1764c8fd.chunk.js.map",
+    "runtime-main.js": "/kana-sensei/static/js/runtime-main.1fca5454.js",
+    "runtime-main.js.map": "/kana-sensei/static/js/runtime-main.1fca5454.js.map",
+    "static/js/2.46f3a526.chunk.js": "/kana-sensei/static/js/2.46f3a526.chunk.js",
+    "static/js/2.46f3a526.chunk.js.map": "/kana-sensei/static/js/2.46f3a526.chunk.js.map",
+    "index.html": "/kana-sensei/index.html",
+    "precache-manifest.3ce3f26fc132c770463d4ac5b5976ef2.js": "/kana-sensei/precache-manifest.3ce3f26fc132c770463d4ac5b5976ef2.js",
+    "service-worker.js": "/kana-sensei/service-worker.js",
+    "static/css/main.2ac0b84c.chunk.css.map": "/kana-sensei/static/css/main.2ac0b84c.chunk.css.map",
+    "static/js/2.46f3a526.chunk.js.LICENSE.txt": "/kana-sensei/static/js/2.46f3a526.chunk.js.LICENSE.txt",
+    "static/media/archive.svg": "/kana-sensei/static/media/archive.97582ec6.svg",
+    "static/media/cute-japanese-man-traditional-by-Vexels.79abded1.svg": "/kana-sensei/static/media/cute-japanese-man-traditional-by-Vexels.79abded1.svg",
+    "static/media/cute-japanese-school-girl-by-Vexels.32a11923.svg": "/kana-sensei/static/media/cute-japanese-school-girl-by-Vexels.32a11923.svg",
+    "static/media/cute-japanese-woman-traditional-by-Vexels.125ed3c0.svg": "/kana-sensei/static/media/cute-japanese-woman-traditional-by-Vexels.125ed3c0.svg",
+    "static/media/download-cloud.svg": "/kana-sensei/static/media/download-cloud.743d6d35.svg",
+    "static/media/help-circle.svg": "/kana-sensei/static/media/help-circle.a217347f.svg",
+    "static/media/moon.svg": "/kana-sensei/static/media/moon.5947fcb1.svg",
+    "static/media/smartphone.svg": "/kana-sensei/static/media/smartphone.2b990350.svg",
+    "static/media/smile.svg": "/kana-sensei/static/media/smile.985edeb5.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.93227d91.js",
-    "static/js/2.8c94818f.chunk.js",
-    "static/css/main.f484807d.chunk.css",
-    "static/js/main.00513baf.chunk.js"
+    "static/js/runtime-main.1fca5454.js",
+    "static/js/2.46f3a526.chunk.js",
+    "static/css/main.2ac0b84c.chunk.css",
+    "static/js/main.1764c8fd.chunk.js"
   ]
 }
