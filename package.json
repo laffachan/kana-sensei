@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "kana-practice",
+  "name": "kana-sensei",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://laffachan.github.io/kana-practice",
+  "homepage": "https://laffachan.github.io/kana-sensei",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {

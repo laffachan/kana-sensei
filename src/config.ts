@@ -1,5 +1,5 @@
-export const siteName = 'Kana Practice'
+export const siteName = 'Kana Sensei'
 export const authorUrl = 'https://github.com/laffachan'
 export const twitterUsername = 'Laffa06'
-export const repoPath = 'laffachan/kana-practice'
+export const repoPath = 'laffachan/kana-sensei'
 
