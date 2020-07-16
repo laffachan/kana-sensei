@@ -1,72 +1,42 @@
-import React, { useState } from "react";
-import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Revision from "./Revision";
-import Practice from "./Practice";
-import { hiragana, katakana } from "./kana";
-import Home from "./Home";
-import ReactModal from "react-modal";
-import Modal from "react-modal";
+import { ReactComponent as BookIcon } from 'feather-icons/dist/icons/help-circle.svg'
+import React from 'react'
+import { HashRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { Chart } from './Chart'
+import { siteName } from './config'
+import { Home } from './Home'
+import { Practice } from './Practice'
 
-export default function App() {
-  const [showModal, setShowModal] = useState(false);
-
-  Modal.setAppElement("#root");
-
-  function handleOpenModal() {
-    setShowModal(true);
-  }
-
-  function handleCloseModal() {
-    setShowModal(false);
-  }
-
-  return (
-    <Router>
-      <div
-        className="relative flex flex-col min-h-screen divide-y divide-gray-400"
-        style={{ minHeight: "-webkit-fill-available" }}
-      >
-        <div className="flex-grow w-full">
-          <div className="p-4 border-b bg-teal-100">
-            <div className="lg:mx-40 xl:mx-64 flex justify-between text-black">
-            <Link to="/">
-              <div>
-                <span role="img" aria-label="">
-                  ⛩️
-                </span>{" "}
-                KANA Practice
-              </div>
+export const App: React.FunctionComponent = () => (
+  <Router>
+    <div
+      className="relative flex flex-col min-h-screen text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-gray-900"
+      style={{ minHeight: '-webkit-fill-available' }}
+    >
+      <header className="px-2 py-3 text-xl text-purple-300 bg-purple-900">
+        <nav className="container flex justify-between mx-auto">
+          <Link to="/">{siteName}</Link>
+          <div>
+            <Link to="/chart">
+              <BookIcon className="inline-block mr-2" />
+              Kana List
             </Link>
-            <div>
-              <span role="img" aria-label="">
-                📔
-              </span>{" "}
-              <button onClick={handleOpenModal}>Kana List</button>
-              <ReactModal
-                isOpen={showModal}
-                contentLabel="Revision"
-                onRequestClose={handleCloseModal}
-              >
-                <div>
-                  <Revision handleClose={handleCloseModal} />
-                </div>
-              </ReactModal>
-            </div>
-            </div>
           </div>
-          <Switch>
-            <Route path="/hiragana">
-              <Practice data={hiragana} />
-            </Route>
-            <Route path="/katakana">
-              <Practice data={katakana} />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </div>
-      </div>
-    </Router>
-  );
-}
+        </nav>
+      </header>
+      <Switch>
+        <Route path="/hiragana">
+          <Practice field="hiragana" />
+        </Route>
+        <Route path="/katakana">
+          <Practice field="katakana" />
+        </Route>
+        <Route path="/chart">
+          <Chart />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
+  </Router>
+)

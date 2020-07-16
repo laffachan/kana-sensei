@@ -587,18 +587,6 @@ video {
   height: auto;
 }
 
-body {
-  color: #000;
-  background-color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
 .container {
   width: 100%;
 }
@@ -6303,6 +6291,10 @@ body {
 
 .text-6xl {
   font-size: 4rem;
+}
+
+.text-7xl {
+  font-size: 6rem;
 }
 
 .leading-3 {
@@ -15372,6 +15364,10 @@ body {
   --transform-rotate: 0;
 }
 
+.rotate-10 {
+  --transform-rotate: 10deg;
+}
+
 .rotate-45 {
   --transform-rotate: 45deg;
 }
@@ -15396,8 +15392,16 @@ body {
   --transform-rotate: -45deg;
 }
 
+.-rotate-10 {
+  --transform-rotate: -10deg;
+}
+
 .hover\:rotate-0:hover {
   --transform-rotate: 0;
+}
+
+.hover\:rotate-10:hover {
+  --transform-rotate: 10deg;
 }
 
 .hover\:rotate-45:hover {
@@ -15424,8 +15428,16 @@ body {
   --transform-rotate: -45deg;
 }
 
+.hover\:-rotate-10:hover {
+  --transform-rotate: -10deg;
+}
+
 .focus\:rotate-0:focus {
   --transform-rotate: 0;
+}
+
+.focus\:rotate-10:focus {
+  --transform-rotate: 10deg;
 }
 
 .focus\:rotate-45:focus {
@@ -15450,6 +15462,10 @@ body {
 
 .focus\:-rotate-45:focus {
   --transform-rotate: -45deg;
+}
+
+.focus\:-rotate-10:focus {
+  --transform-rotate: -10deg;
 }
 
 .translate-x-0 {
@@ -22389,6 +22405,10 @@ body {
 
   .sm\:text-6xl {
     font-size: 4rem;
+  }
+
+  .sm\:text-7xl {
+    font-size: 6rem;
   }
 
   .sm\:leading-3 {
@@ -31458,6 +31478,10 @@ body {
     --transform-rotate: 0;
   }
 
+  .sm\:rotate-10 {
+    --transform-rotate: 10deg;
+  }
+
   .sm\:rotate-45 {
     --transform-rotate: 45deg;
   }
@@ -31482,8 +31506,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .sm\:-rotate-10 {
+    --transform-rotate: -10deg;
+  }
+
   .sm\:hover\:rotate-0:hover {
     --transform-rotate: 0;
+  }
+
+  .sm\:hover\:rotate-10:hover {
+    --transform-rotate: 10deg;
   }
 
   .sm\:hover\:rotate-45:hover {
@@ -31510,8 +31542,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .sm\:hover\:-rotate-10:hover {
+    --transform-rotate: -10deg;
+  }
+
   .sm\:focus\:rotate-0:focus {
     --transform-rotate: 0;
+  }
+
+  .sm\:focus\:rotate-10:focus {
+    --transform-rotate: 10deg;
   }
 
   .sm\:focus\:rotate-45:focus {
@@ -31536,6 +31576,10 @@ body {
 
   .sm\:focus\:-rotate-45:focus {
     --transform-rotate: -45deg;
+  }
+
+  .sm\:focus\:-rotate-10:focus {
+    --transform-rotate: -10deg;
   }
 
   .sm\:translate-x-0 {
@@ -38476,6 +38520,10 @@ body {
 
   .md\:text-6xl {
     font-size: 4rem;
+  }
+
+  .md\:text-7xl {
+    font-size: 6rem;
   }
 
   .md\:leading-3 {
@@ -47545,6 +47593,10 @@ body {
     --transform-rotate: 0;
   }
 
+  .md\:rotate-10 {
+    --transform-rotate: 10deg;
+  }
+
   .md\:rotate-45 {
     --transform-rotate: 45deg;
   }
@@ -47569,8 +47621,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .md\:-rotate-10 {
+    --transform-rotate: -10deg;
+  }
+
   .md\:hover\:rotate-0:hover {
     --transform-rotate: 0;
+  }
+
+  .md\:hover\:rotate-10:hover {
+    --transform-rotate: 10deg;
   }
 
   .md\:hover\:rotate-45:hover {
@@ -47597,8 +47657,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .md\:hover\:-rotate-10:hover {
+    --transform-rotate: -10deg;
+  }
+
   .md\:focus\:rotate-0:focus {
     --transform-rotate: 0;
+  }
+
+  .md\:focus\:rotate-10:focus {
+    --transform-rotate: 10deg;
   }
 
   .md\:focus\:rotate-45:focus {
@@ -47623,6 +47691,10 @@ body {
 
   .md\:focus\:-rotate-45:focus {
     --transform-rotate: -45deg;
+  }
+
+  .md\:focus\:-rotate-10:focus {
+    --transform-rotate: -10deg;
   }
 
   .md\:translate-x-0 {
@@ -54563,6 +54635,10 @@ body {
 
   .lg\:text-6xl {
     font-size: 4rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 6rem;
   }
 
   .lg\:leading-3 {
@@ -63632,6 +63708,10 @@ body {
     --transform-rotate: 0;
   }
 
+  .lg\:rotate-10 {
+    --transform-rotate: 10deg;
+  }
+
   .lg\:rotate-45 {
     --transform-rotate: 45deg;
   }
@@ -63656,8 +63736,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .lg\:-rotate-10 {
+    --transform-rotate: -10deg;
+  }
+
   .lg\:hover\:rotate-0:hover {
     --transform-rotate: 0;
+  }
+
+  .lg\:hover\:rotate-10:hover {
+    --transform-rotate: 10deg;
   }
 
   .lg\:hover\:rotate-45:hover {
@@ -63684,8 +63772,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .lg\:hover\:-rotate-10:hover {
+    --transform-rotate: -10deg;
+  }
+
   .lg\:focus\:rotate-0:focus {
     --transform-rotate: 0;
+  }
+
+  .lg\:focus\:rotate-10:focus {
+    --transform-rotate: 10deg;
   }
 
   .lg\:focus\:rotate-45:focus {
@@ -63710,6 +63806,10 @@ body {
 
   .lg\:focus\:-rotate-45:focus {
     --transform-rotate: -45deg;
+  }
+
+  .lg\:focus\:-rotate-10:focus {
+    --transform-rotate: -10deg;
   }
 
   .lg\:translate-x-0 {
@@ -70650,6 +70750,10 @@ body {
 
   .xl\:text-6xl {
     font-size: 4rem;
+  }
+
+  .xl\:text-7xl {
+    font-size: 6rem;
   }
 
   .xl\:leading-3 {
@@ -79719,6 +79823,10 @@ body {
     --transform-rotate: 0;
   }
 
+  .xl\:rotate-10 {
+    --transform-rotate: 10deg;
+  }
+
   .xl\:rotate-45 {
     --transform-rotate: 45deg;
   }
@@ -79743,8 +79851,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .xl\:-rotate-10 {
+    --transform-rotate: -10deg;
+  }
+
   .xl\:hover\:rotate-0:hover {
     --transform-rotate: 0;
+  }
+
+  .xl\:hover\:rotate-10:hover {
+    --transform-rotate: 10deg;
   }
 
   .xl\:hover\:rotate-45:hover {
@@ -79771,8 +79887,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .xl\:hover\:-rotate-10:hover {
+    --transform-rotate: -10deg;
+  }
+
   .xl\:focus\:rotate-0:focus {
     --transform-rotate: 0;
+  }
+
+  .xl\:focus\:rotate-10:focus {
+    --transform-rotate: 10deg;
   }
 
   .xl\:focus\:rotate-45:focus {
@@ -79797,6 +79921,10 @@ body {
 
   .xl\:focus\:-rotate-45:focus {
     --transform-rotate: -45deg;
+  }
+
+  .xl\:focus\:-rotate-10:focus {
+    --transform-rotate: -10deg;
   }
 
   .xl\:translate-x-0 {
@@ -86737,6 +86865,10 @@ body {
 
   .light\:text-6xl {
     font-size: 4rem;
+  }
+
+  .light\:text-7xl {
+    font-size: 6rem;
   }
 
   .light\:leading-3 {
@@ -95806,6 +95938,10 @@ body {
     --transform-rotate: 0;
   }
 
+  .light\:rotate-10 {
+    --transform-rotate: 10deg;
+  }
+
   .light\:rotate-45 {
     --transform-rotate: 45deg;
   }
@@ -95830,8 +95966,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .light\:-rotate-10 {
+    --transform-rotate: -10deg;
+  }
+
   .light\:hover\:rotate-0:hover {
     --transform-rotate: 0;
+  }
+
+  .light\:hover\:rotate-10:hover {
+    --transform-rotate: 10deg;
   }
 
   .light\:hover\:rotate-45:hover {
@@ -95858,8 +96002,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .light\:hover\:-rotate-10:hover {
+    --transform-rotate: -10deg;
+  }
+
   .light\:focus\:rotate-0:focus {
     --transform-rotate: 0;
+  }
+
+  .light\:focus\:rotate-10:focus {
+    --transform-rotate: 10deg;
   }
 
   .light\:focus\:rotate-45:focus {
@@ -95884,6 +96036,10 @@ body {
 
   .light\:focus\:-rotate-45:focus {
     --transform-rotate: -45deg;
+  }
+
+  .light\:focus\:-rotate-10:focus {
+    --transform-rotate: -10deg;
   }
 
   .light\:translate-x-0 {
@@ -102824,6 +102980,10 @@ body {
 
   .dark\:text-6xl {
     font-size: 4rem;
+  }
+
+  .dark\:text-7xl {
+    font-size: 6rem;
   }
 
   .dark\:leading-3 {
@@ -111893,6 +112053,10 @@ body {
     --transform-rotate: 0;
   }
 
+  .dark\:rotate-10 {
+    --transform-rotate: 10deg;
+  }
+
   .dark\:rotate-45 {
     --transform-rotate: 45deg;
   }
@@ -111917,8 +112081,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .dark\:-rotate-10 {
+    --transform-rotate: -10deg;
+  }
+
   .dark\:hover\:rotate-0:hover {
     --transform-rotate: 0;
+  }
+
+  .dark\:hover\:rotate-10:hover {
+    --transform-rotate: 10deg;
   }
 
   .dark\:hover\:rotate-45:hover {
@@ -111945,8 +112117,16 @@ body {
     --transform-rotate: -45deg;
   }
 
+  .dark\:hover\:-rotate-10:hover {
+    --transform-rotate: -10deg;
+  }
+
   .dark\:focus\:rotate-0:focus {
     --transform-rotate: 0;
+  }
+
+  .dark\:focus\:rotate-10:focus {
+    --transform-rotate: 10deg;
   }
 
   .dark\:focus\:rotate-45:focus {
@@ -111971,6 +112151,10 @@ body {
 
   .dark\:focus\:-rotate-45:focus {
     --transform-rotate: -45deg;
+  }
+
+  .dark\:focus\:-rotate-10:focus {
+    --transform-rotate: -10deg;
   }
 
   .dark\:translate-x-0 {

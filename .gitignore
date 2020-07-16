@@ -1,2 +1,7 @@
-build
 node_modules
+
+# CRA output
+build
+
+# PostCSS output
+src/assets/main.css
